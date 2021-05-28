@@ -1,0 +1,127 @@
+body{
+    background: #206a5d ;
+    /*Asignando una famila de fuentes*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 1rem;
+    padding-top: 2rem;
+}
+
+h1{
+    font-size: 2rem;
+    line-height: 1.3em;
+    font-family: 'arial';
+    text-align: center;
+    margin-top: 3em;
+    color: #a6f0c6;
+
+}
+p{
+    margin-bottom: 1.6rem;
+    color: "#bfcba8";
+}
+
+.container{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.header{
+    background:rgb(104, 153, 30);
+    color: white;
+    padding: 1.5rem 0;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+    .header a{
+        color: blanchedalmond;
+        text-decoration: none;
+        font-family: 'arial'
+
+    }
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap; /*Mantiene los elementos visibles aunque la pantalla sea pequeña*/
+}
+
+.logo{
+    letter-spacing: 15px;
+    font-size: 1.4em;
+    font-family: 'Century Gothic';
+}
+.navigation{
+	width: 100%;
+	margin-top:1rem;
+}
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .navigation ul li{
+        display: inline-block;
+    }
+        .navigation ul li a{
+            display: block;
+            padding: 0.5 rem 1rem;
+            transition: all 0.4s linear;
+            border-radius: 5px;
+        }
+            .navigation ul li a:hover{
+                background: #91c788;
+            }
+
+.main{
+    padding-top: 12rem;
+}
+
+.footer{
+    background: #81b214;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 4rem;
+
+}
+
+/*Ejemplo: Aplicar esti cuando la pantalla tenga 767 pixeles de ancho*/
+@media screen and (max-width=767px;){
+	.navigation ul li{
+        	display: inline-block;
+    	}
+        	.navigation ul li a{
+         	   	display: block;
+           		padding: 0.5 rem 1rem;
+	            	transition: all 0.4s linear;
+        	    	border-radius: 5px;
+        	}
+            		.navigation ul li a:hover{
+                		background: #91c788;
+            		}
+}
+
+.footer-container{
+	display: inline-block;
+	justify-content: space-between;
+}
+.redes-sociales .bubble i{
+	color: #ccc;
+	padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.redes-sociales .bubble:hover i{
+	color:#1f2b40
+}
