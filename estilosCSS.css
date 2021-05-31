@@ -1,12 +1,16 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: #206a5d ;
     /*Asignando una famila de fuentes*/
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.6em;
-    margin: 1rem;
-    padding-top: 2rem;
+    margin:0;
+    /*padding-top: 2rem;*/
 }
 
 h1{
@@ -15,12 +19,12 @@ h1{
     font-family: 'arial';
     text-align: center;
     margin-top: 3em;
-    color: #a6f0c6;
+    color: "#bfcba8";
 
 }
 p{
     margin-bottom: 1.6rem;
-    color: "#bfcba8";
+    color: #a6f0c6;
 }
 
 .container{
@@ -32,7 +36,7 @@ p{
 .header{
     background:rgb(104, 153, 30);
     color: white;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
 
     position: fixed;
     left: 0;
@@ -40,12 +44,11 @@ p{
     right: 0;
 }
 
-    .header a{
-        color: blanchedalmond;
-        text-decoration: none;
-        font-family: 'arial'
-
-    }
+.header a{
+    color: blanchedalmond;
+    text-decoration: none;
+    font-family: 'arial'
+}
 
 .logo-nav-container{
     display: flex;
@@ -59,10 +62,15 @@ p{
     font-size: 1.4em;
     font-family: 'Century Gothic';
 }
-.navigation{
+
+.menu-icon{
+    display: none;
+}
+
+/*.navigation{
 	width: 100%;
 	margin-top:1rem;
-}
+}*/
 .navigation ul{
     margin: 0;
     padding: 0;
@@ -88,32 +96,57 @@ p{
 
 .footer{
     background: #81b214;
-    padding: 1rem 0;
+    padding: 4rem 0;
     text-align: center;
-    margin-top: 4rem;
-
+    margin-top: 6rem;
 }
 
-/*Ejemplo: Aplicar esti cuando la pantalla tenga 767 pixeles de ancho*/
-@media screen and (max-width=767px;){
-	.navigation ul li{
-        	display: inline-block;
-    	}
-        	.navigation ul li a{
-         	   	display: block;
-           		padding: 0.5 rem 1rem;
-	            	transition: all 0.4s linear;
-        	    	border-radius: 5px;
-        	}
-            		.navigation ul li a:hover{
-                		background: #91c788;
-            		}
+.redes-sociales{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+/*Ejemplo: Aplicar esto cuando la pantalla tenga 767 pixeles de ancho*/
+@media screen and (max-width:767px) {
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;
+
+   }
+     .navigation ul{
+         display: none;
+     }
+       .navigation ul.show{
+           display: block;
+       }
+        .navigation ul li{
+                    display: block;
+            }
+    
+            .navigation ul li a{
+                display: block;
+                padding: 0.5rem 0;
+                transition: all 0.4s linear;
+                border-radius: 5px;
+            }
+    
+                .navigation ul li a:hover{
+                    background: #91c788;
+                } 
 }
 
 .footer-container{
 	display: inline-block;
 	justify-content: space-between;
 }
+
 .redes-sociales .bubble i{
 	color: #ccc;
 	padding: 2rem;
@@ -124,4 +157,31 @@ p{
 
 .redes-sociales .bubble:hover i{
 	color:#1f2b40
+}
+
+/*Botón de ir arriba*/
+#button-up{
+    color: white;
+    width: 40px;
+    height: 40px;
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    /*Cambiar posición del contenedor del icono*/
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border: 4px solid transparent;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 300ms ease;
+    transform: scale(0);
+}
+
+#button-up:hover{
+    transform: scale(1.1); /*Hace más grande el objeto cuando el puntero se situa sobre el icono*/
+    border-color: skyblue /*Agregar color al borde*/
 }
